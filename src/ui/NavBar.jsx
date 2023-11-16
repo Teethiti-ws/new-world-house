@@ -2,16 +2,17 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const StyledNavBar = styled.div`
-  // MARK scroll NavBar
-  // position: fixed;
-  // background: red;
-  // padding: 9.4rem 9.9rem;
+  background: var(--color-brand--2);
+  position: sticky;
+  top: 0;
   padding: 6rem 9.9rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  z-index: 1;
 `;
 
 const StyledUl = styled.ul`
@@ -35,9 +36,14 @@ const StyledMenu = styled.li`
   }
 `;
 
+// const initCoords = sec
+
 function NavBar() {
   return (
     <StyledNavBar>
+      {window.addEventListener("scroll", function () {
+        console.log(this.window.scrollY);
+      })}
       <Logo />
       <StyledUl>
         <StyledMenu>HOME</StyledMenu>
