@@ -36,14 +36,9 @@ const StyledMenu = styled.li`
   }
 `;
 
-// const initCoords = sec
-
 function NavBar() {
   return (
     <StyledNavBar>
-      {window.addEventListener("scroll", function () {
-        console.log(this.window.scrollY);
-      })}
       <Logo />
       <StyledUl>
         <StyledMenu>HOME</StyledMenu>

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Banner from "../ui/Banner";
-import ContentUnknowPlant from "../ui/ContentUnknowPlant";
-import ContentMetaverseYoutube from "../ui/ContentMetaverseYoutube";
 import Solution from "../ui/Solution";
+import Project from "../ui/Project";
 
 const StyledMainContent = styled.div`
   display: block;
@@ -11,14 +10,27 @@ const StyledMainContent = styled.div`
 
 function Homepage() {
   return (
-    <>
-      <StyledMainContent>
-        <Banner />
-        <ContentUnknowPlant />
-        <ContentMetaverseYoutube />
-        <Solution />
-      </StyledMainContent>
-    </>
+    <StyledMainContent>
+      <Banner />
+      <Project
+        projectName={"UNKNOWN PLANET"}
+        year={"2022"}
+        detailConcept={
+          "There are still many planets in the galaxy that are waiting for you."
+        }
+        imgPath={"/img1.png"}
+        reverse
+      />
+      <Project
+        projectName={"METAVERSE YOUTUBE"}
+        year={"2022"}
+        detailConcept={
+          "There are still many planets in the galaxy that are waiting for you."
+        }
+        imgPath={"/img2.png"}
+      />
+      <Solution />
+    </StyledMainContent>
   );
 }
 
