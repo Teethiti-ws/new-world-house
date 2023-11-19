@@ -8,15 +8,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-
-  /* max-width: 1440px; */
+  /* box-sizing: inherit; */
+  box-sizing: border-box;
 }
 
 html {
+  /* max-width: 100vh; */
   /* font-size: 10px; */
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
@@ -26,11 +25,6 @@ body {
 
   color: var(--color-brand--1);
   background-color: var(--color-brand--2);
-}
-
-label {
-  font-size: 1.6rem;
-  font-weight: 600;
 }
 
 ul {
@@ -58,6 +52,7 @@ h6 {
 
 .btn,
 .btn-white {
+  display: inline-block;
   background-color: var(--color-brand--1);
-  color: --color-brand--2;
+  color: var(--color-brand--2);
 }

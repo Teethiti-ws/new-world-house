@@ -1,16 +1,10 @@
-import styled from "styled-components";
 import Banner from "../ui/Banner";
 import Solution from "../ui/Solution";
 import Project from "../ui/Project";
 
-const StyledMainContent = styled.div`
-  display: block;
-  justify-centent: center;
-`;
-
 function Homepage() {
   return (
-    <StyledMainContent>
+    <>
       <Banner />
       <Project
         projectName={"UNKNOWN PLANET"}
@@ -29,8 +23,9 @@ function Homepage() {
         }
         imgPath={"/img2.png"}
       />
+
       <Solution />
-    </StyledMainContent>
+    </>
   );
 }
 

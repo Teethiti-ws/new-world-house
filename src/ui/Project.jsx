@@ -2,18 +2,31 @@ import styled from "styled-components";
 
 const StyledContent = styled.div`
   display: flex;
-  justify-content: space-around;
-  gap: 10rem;
-  padding: 8rem 9rem;
-`;
-const StyledText = styled.div`
-  display: grid;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100vh;
+  padding: 2rem;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 2rem 4rem;
+  }
 `;
+
+const StyledText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
 const StyledImg = styled.img`
-  width: 41.3rem;
-  height: 42.7rem;
+  width: 100%;
+  max-width: 41.3rem;
+  height: auto;
 `;
 
 const Project = ({
@@ -25,10 +38,10 @@ const Project = ({
 }) => {
   const ElementText = (
     <StyledText>
-      <h6 style={{ fontSize: "4rem" }}>PROJECT</h6>
-      <h4 style={{ fontSize: "6.6rem" }}>{projectName}</h4>
-      <p style={{ fontSize: "2.9rem" }}>YEAR: {year}</p>
-      <p style={{ fontSize: "2rem", marginTop: "3rem" }}>
+      <h6 style={{ fontSize: "2rem" }}>PROJECT</h6>
+      <h4 style={{ fontSize: "3rem" }}>{projectName}</h4>
+      <p style={{ fontSize: "1.5rem" }}>YEAR: {year}</p>
+      <p style={{ fontSize: "1.2rem", marginTop: "1rem" }}>
         <span style={{ fontWeight: "600" }}>CONCEPT</span>: {detailConcept}
       </p>
     </StyledText>

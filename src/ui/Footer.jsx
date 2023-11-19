@@ -10,12 +10,18 @@ import {
 import CopyRight from "./CopyRight";
 
 const StyledLayout = styled.div`
+  width: 100vh;
   display: flex;
-  align-items: top;
+  flex-direction: row; /*column */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 15rem;
   background: var(--color-brand--footer);
   padding: 2.5rem 8.5rem;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -54,6 +60,48 @@ const StyledUlFooter = styled.ul`
     margin: 0.1rem 0 0.1rem 0;
   }
 `;
+
+// const StyledLayout = styled.div`
+//   display: flex;
+//   flex-direction: row; /*column */
+//   flex-wrap: wrap;
+
+//   align-items: center;
+//   justify-content: center;
+//   background: var(--color-brand--footer);
+//   padding: 2.5rem 1.5rem;
+// `;
+
+// const StyledContainer = styled.div`
+//   display: block;
+//   text-align: center;
+//   margin-bottom: 2rem;
+// `;
+
+// const ImgFooter = styled.img`
+//   margin: auto;
+//   height: auto;
+//   width: 100%;
+//   max-width: 200px; /* Set a maximum width for the logo */
+// `;
+
+// const StyledTopic = styled.p`
+//   font-size: 2rem;
+//   font-weight: 600;
+//   margin-bottom: 1rem;
+// `;
+
+// const StyledUl = styled.ul`
+//   list-style-type: none;
+//   font-size: 1.6rem;
+//   padding: 0;
+// `;
+
+// const StyledUlFooter = styled.ul`
+//   list-style-type: disc;
+//   font-size: 1.3rem;
+//   padding-left: 2rem;
+// `;
 
 function Footer() {
   return (

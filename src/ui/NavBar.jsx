@@ -5,29 +5,29 @@ const StyledNavBar = styled.div`
   background: var(--color-brand--2);
   position: sticky;
   top: 0;
-  padding: 6rem 9.9rem;
+  padding: 1rem 1rem;
 
-  display: flex;
+  width: 100vh;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
 
-  z-index: 1;
+  @media (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 6rem;
+  }
 `;
 
 const StyledUl = styled.ul`
+  padding: 2rem 0;
   display: flex;
-  align-items: center;
-  gap: 3.9rem;
+  justify-content: center;
+  gap: 1.5rem;
   font-size: 2rem;
 `;
 
 const StyledMenu = styled.li`
-  // MARK hover && scroll page
-  // :visited {
-  //   text-decoration: underline;
-  // }
-
   &:hover,
   &:active,
   &.active:visited {
