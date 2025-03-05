@@ -15,13 +15,10 @@ const StyledCopyRight = styled.div`
 
 const Line = styled.div`
   position: relative;
-  // top: 50%;
-  // left: 50%;
   background: var(--color-brand--1);
   height: 0.1vh;
   width: 100vh;
   display: block;
-  // transform: translate(-50%, -50%);
 
   @media (min-width: 768px) {
     width: 100%;
