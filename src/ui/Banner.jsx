@@ -18,16 +18,18 @@ const StayledBanner = styled.div`
 
 function Banner() {
   return (
-    <StayledBanner>
-      <h1 style={{ fontSize: "3.8rem" }}>PRODUCTION HOUSE</h1>
-      <h2 style={{ fontSize: "10rem" }}>IN METAVERSE</h2>
-      <p style={{ fontSize: "2rem" }}>
-        3D SOLUTION LIKE 3D Digital art, 3D Animation, 3D Game
-      </p>
-      <button className="btn btn-white" style={{ margin: "4.4rem" }}>
-        Discover More &raquo;
-      </button>
-    </StayledBanner>
+    <section id="home">
+      <StayledBanner>
+        <h1 style={{ fontSize: "3.8rem" }}>PRODUCTION HOUSE</h1>
+        <h2 style={{ fontSize: "10rem" }}>IN METAVERSE</h2>
+        <p style={{ fontSize: "2rem" }}>
+          3D SOLUTION LIKE 3D Digital art, 3D Animation, 3D Game
+        </p>
+        <button className="btn btn-white" style={{ margin: "4.4rem" }}>
+          Discover More &raquo;
+        </button>
+      </StayledBanner>
+    </section>
   );
 }
 

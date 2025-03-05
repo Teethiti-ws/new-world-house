@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Img = styled.img`
+  object-fit: contain;
   // display: none;
   padding: 0 15rem;
   // margin: 1rem 0rem;

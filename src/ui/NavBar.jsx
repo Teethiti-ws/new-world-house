@@ -10,6 +10,8 @@ const StyledNavBar = styled.div`
   width: 100vh;
   align-items: center;
 
+  border-bottom: 1px solid var(--color-brand--1);
+
   @media (min-width: 768px) {
     width: 100%;
     display: flex;
@@ -37,15 +39,32 @@ const StyledMenu = styled.li`
 `;
 
 function NavBar() {
+  const handleClickMenu = (menu) => {
+    const url = new URL(window.location);
+    url.searchParams.set("scrollTo", menu);
+    window.history.pushState({}, "", `?scrollTo=${menu}`);
+
+    const sectionElement = document.getElementById(menu);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledNavBar>
       <Logo />
       <StyledUl>
-        <StyledMenu>HOME</StyledMenu>
-        <StyledMenu>PROJECT</StyledMenu>
-        <StyledMenu>SOLUTION</StyledMenu>
-        <StyledMenu>ABOUT</StyledMenu>
-        <StyledMenu>CONTACT</StyledMenu>
+        <StyledMenu onClick={() => handleClickMenu("home")}>HOME</StyledMenu>
+        <StyledMenu onClick={() => handleClickMenu("project")}>
+          PROJECT
+        </StyledMenu>
+        <StyledMenu onClick={() => handleClickMenu("solution")}>
+          SOLUTION
+        </StyledMenu>
+        <StyledMenu onClick={() => handleClickMenu("about")}>ABOUT</StyledMenu>
+        <StyledMenu onClick={() => handleClickMenu("contact")}>
+          CONTACT
+        </StyledMenu>
       </StyledUl>
     </StyledNavBar>
   );

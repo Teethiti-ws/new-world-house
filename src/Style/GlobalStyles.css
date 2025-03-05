@@ -27,6 +27,10 @@ body {
   background-color: var(--color-brand--2);
 }
 
+section {
+  scroll-margin-top: 132px;
+}
+
 ul {
   list-style: none;
 }
