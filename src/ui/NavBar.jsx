@@ -14,6 +14,7 @@ const StyledNavBar = styled.div`
 
   border-bottom: 1px solid var(--color-brand--1);
 
+  z-index: 1000;
   @media (min-width: 768px) {
     width: 100%;
     display: flex;

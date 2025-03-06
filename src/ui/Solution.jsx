@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
 const StyldeLayout = styled.div`
-  width: 100vh;
   position: relative;
   display: block;
   padding: 6rem 2rem;
 
-  z-index: -1;
   @media (min-width: 768px) {
-    width: 100%;
     padding: 6rem 8.5rem 8rem 8.5rem;
   }
 `;
@@ -30,7 +27,6 @@ const StyldeList = styled.div`
   display: grid;
   text-align: center;
   margin-bottom: 2rem;
-
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
