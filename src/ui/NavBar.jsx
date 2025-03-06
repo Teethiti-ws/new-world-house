@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Logo from "./Logo";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 
 const StyledNavBar = styled.div`

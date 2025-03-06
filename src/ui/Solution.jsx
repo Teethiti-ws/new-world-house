@@ -69,8 +69,8 @@ const BorderBox = styled.div`
 
 function Solution() {
   return (
-    <section id="solution">
-      <StyldeLayout>
+    <StyldeLayout>
+      <section id="solution">
         <StyledTopic>Solution</StyledTopic>
         <StyldeContainer>
           <StyldeList>
@@ -98,8 +98,8 @@ function Solution() {
           </StyldeList>
         </StyldeContainer>
         <BorderBox />
-      </StyldeLayout>
-    </section>
+      </section>
+    </StyldeLayout>
   );
 }
 
