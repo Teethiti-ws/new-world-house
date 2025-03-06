@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const StyledNavBar = styled.div`
   background: var(--color-brand--2);
@@ -39,16 +41,21 @@ const StyledMenu = styled.li`
 `;
 
 function NavBar() {
-  const handleClickMenu = (menu) => {
-    const url = new URL(window.location);
-    url.searchParams.set("scrollTo", menu);
-    window.history.pushState({}, "", `?scrollTo=${menu}`);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    const sectionElement = document.getElementById(menu);
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleClickMenu = (menu) => {
+    setSearchParams({ scrollTo: menu });
   };
+
+  useEffect(() => {
+    const scrollTo = searchParams.get("scrollTo");
+    if (scrollTo) {
+      const sectionElement = document.getElementById(scrollTo);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [searchParams.get("scrollTo")]);
 
   return (
     <StyledNavBar>
